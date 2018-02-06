@@ -2,7 +2,12 @@ sudo: true
 dist: trusty
 cache: false
 env:
-- URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+  global:
+  - URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+  - coreId=04tf4000001I1CsAAK
+  - logicId=04tf4000001I1CxAAK
+  - uiId=04tf4000001I1D2AAK
+  - securityId=04tf4000001I1D7AAK
 before_install:
 - openssl aes-256-cbc -K $encrypted_ca114f687cd3_key -iv $encrypted_ca114f687cd3_iv
   -in assets/server.key.enc -out assets/server.key -d
@@ -14,7 +19,6 @@ before_install:
 - "./sfdx/install"
 - export PATH=./sfdx/$(pwd):$PATH
 - sfdx update
-
 - sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key
   --username $USERNAME --setdefaultdevhubusername -a HubOrg
 script:
