@@ -1,4 +1,5 @@
 {
+    "name": "travis-ci-demo",
     "scripts": {
         "test": "jasmine"
     },
