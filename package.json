@@ -1,0 +1,9 @@
+{
+    "name": "travis-ci-demo",
+    "scripts": {
+        "test": "jasmine"
+    },
+    "devDependencies": {
+        "jasmine": "^2.9.0"
+    }
+}
