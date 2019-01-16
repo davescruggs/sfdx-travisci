@@ -12,4 +12,12 @@ private class mytest {
         myclass demo = new myclass();
         System.assertEquals(demo.getMajorVersion(), 1);
     }
+    
+    
+
+    @isTest
+    static void testIsTrue() {
+        
+        System.assertEquals(1, 1);
+    }
 }
